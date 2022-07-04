@@ -1,0 +1,1 @@
+## This application creates a 15 minutes counter.
