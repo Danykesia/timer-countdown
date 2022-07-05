@@ -1,1 +1,1 @@
-## This application creates a 15 minutes counter.
+## This application creates a TIMER and a 15 minutes COUNTDOWN.
