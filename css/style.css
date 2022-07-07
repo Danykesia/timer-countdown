@@ -1,3 +1,4 @@
+/* Timer */
 @font-face {
   font-family: digitalFont;
   src: url(/font/alarm\ clock.ttf);
@@ -7,12 +8,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(26, 26, 26);
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.clock-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .clock {
@@ -27,11 +36,19 @@
   justify-content: center;
 }
 
-.timer {
+.timer, .countdown {
   font-family: digitalFont;
   font-size: 3.5rem;
-  color: #111f0d;
   font-weight: bold;
+  background-color: transparent;
+}
+
+.timer {
+  color: #111f0d;
+}
+
+.countdown {
+  color: #fff;
 }
 
 .pulse-animation {
@@ -63,16 +80,61 @@ button {
   font-size: 1.1rem;
 }
 
-.start {
+.start1, .start2, .pause1, .pause2, .reset1, .reset2 {
+  transition: .3s all;
+}
+
+.start1, .start2 {
   background-color: rgb(215, 250, 222);
 }
 
-.pause {
+.start1:hover, .start2:hover {
+  background-color: rgb(169, 227, 181);
+}
+
+.pause1, .pause2 {
   background-color: rgb(247, 250, 215);
 }
 
-.reset {
+.pause1:hover, .pause2:hover {
+  background-color: rgb(240, 247, 161);
+}
+
+.reset1, .reset2 {
   background-color: rgb(255, 176, 176);
 }
+
+.reset1:hover, .reset2:hover {
+  background-color: rgb(248, 131, 131);
+}
+
+/* Count Down */
+.countdown-wrapper {
+  position: relative;
+}
+
+.countdown {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 46%;
+}
+
+.track {
+  stroke: rgb(199, 199, 199);
+  fill: none;
+  stroke-width: 10px;
+}
+
+.progress {
+  stroke: #f36bec;
+  fill: none;
+  stroke-width: 10px;
+  stroke-dasharray: 630;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
 
 

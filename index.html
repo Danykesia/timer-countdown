@@ -15,13 +15,29 @@
 
 <body>
   <div class="container">
-    <div class="clock">
-      <p class="timer">00:00:00</p>
+    <div class="clock-wrapper">
+      <div class="clock">
+        <p class="timer">00:00:00</p>
+      </div>
+      <div class="buttons">
+        <button class="start1">Start</button>
+        <button class="pause1">Pause</button>
+        <button class="reset1">Reset</button>
+      </div>
     </div>
-    <div class="buttons">
-      <button class="start">Start</button>
-      <button class="pause">Pause</button>
-      <button class="reset">Reset</button>
+
+    <div class="countdown-wrapper">
+      <svg width="300" height="300">
+        <circle r="140" cx="150" cy="150" class="track"></circle>
+        <circle r="140" cx="150" cy="150" class="progress"></circle>
+      </svg>
+      <p class="countdown">00:00</p>
+
+      <div class="buttons">
+        <button class="start2">Start</button>
+        <button class="pause2">Pause</button>
+        <button class="reset2">Reset</button>
+      </div>
     </div>
   </div>
 
